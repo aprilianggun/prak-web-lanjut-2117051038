@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\KelasModel;
 use App\Models\UserModel;
 use Config\Service;
 
@@ -10,7 +11,15 @@ class UserController extends BaseController
 {
     public function index()
     {
-        //
+        $userModel = new UserModel();
+        $users = $userModel->getUser()->findAll(); // Mengambil data user dari model
+
+        $data = [
+            'title' => 'List User',
+            'users' => $users, // Menyimpan data user ke dalam variabel $users
+        ];
+
+        return view('list_user', $data);
     }
 
     public function profile($nama = "", $kelas = "", $npm = "")
@@ -25,28 +34,16 @@ class UserController extends BaseController
 
     public function create()
     {
-        $kelas = [
-            [
-                'id' => 1,
-                'nama_kelas' => 'A',
-            ],
-            [
-                'id' => 2,
-                'nama_kelas' => 'B',
-            ],
-            [
-                'id' => 3,
-                'nama_kelas' => 'C',
-            ],
-            [
-                'id' => 4,
-                'nama_kelas' => 'D'
-            ],
-        ];
+        $kelasModel = new KelasModel();
+
+        $kelas = $kelasModel->getKelas();
 
         $data = [
-            'kelas' => $kelas
+            'title' => 'Create User',
+            'kelas' => $kelas,
         ];
+
+
 
         return view('create_user', $data);
     }
@@ -62,6 +59,12 @@ class UserController extends BaseController
             'npm' => $this->request->getVar('npm'),
         ];
 
+        $this->userModel->saveUser([
+            'nama' => $this->request->getVar('nama'),
+            'id_kelas' => $this->request->getVar('id_kelas'),
+            'npm' => $this->request->getVar('npm'),
+        ]);
+
         // validasi input
         if (!$this->validate([
             'npm' => 'required|is_unique[user.npm]', // Perbaiki aturan validasi ini
@@ -75,6 +78,15 @@ class UserController extends BaseController
         // Simpan data ke dalam database
         $userModel->insert($data);
 
-        return view('profile', $data);
+        return redirect()->to('/user');
+    }
+
+    public $userModel;
+    public $kelasModel;
+
+    public function __construct()
+    {
+        $this->userModel = new UserModel();
+        $this->kelasModel = new KelasModel();
     }
 }
