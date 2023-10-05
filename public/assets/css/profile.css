@@ -40,3 +40,76 @@ body{
 .gambar {
   border-radius: 50%;
 }
+
+.btn-login {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #ff2e63;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cont1 {
+  height: calc(90vh - 50px);
+}
+
+.form-input {
+  position: relative;
+  margin-bottom: 25px;
+  /* margin-bottom: 15px; */
+}
+
+.form-input input {
+  width: 100%; /* Sesuaikan lebar input sesuai kebutuhan Anda */
+  padding: 10px 0;
+  font-size: 16px;
+  color: #555;
+  border: none;
+  border-bottom: 2px solid #e91e63; /* Anda bisa mengubah ketebalan garis ini */
+  outline: none;
+  background-color: transparent;
+}
+
+.form-input label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 16px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.form-input input:focus ~ label,
+.form-input input:valid ~ label {
+  top: -20px;
+  font-size: 12px;
+  color: #e91e63;
+}
+
+.btn-login {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  background-color: #e91e63;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.btn-login:hover {
+  background-color: #c2185b;
+}
+
+.form-container {
+ text-align: center;
+ padding: 20px;
+}
