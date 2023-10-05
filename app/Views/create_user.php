@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?= $this->extend('layout/app') ?>
+<?= $this->section('content') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= base_url("assets/css/form.css") ?>">
-    <title>Document</title>
-</head>
-
-<body>
     <div class="card">
         <div class="card">
             <div class="form-container">
@@ -38,6 +30,3 @@
         </div>
 
     </div>
-</body>
-
-</html>
