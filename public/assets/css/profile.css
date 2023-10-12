@@ -35,10 +35,13 @@ body{
   align-items: center;
   flex-direction: column; /* Stack the elements vertically */
   background-color: #ffffff;
+  text-align: center;
 }
 
 .gambar {
   border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
 .btn-login {
@@ -230,4 +233,11 @@ tr {
   margin-top: 2rem;
   padding-left: 10rem;
   padding-right: 10rem;
+}
+
+.text {
+  margin: 20px; /* Atur jarak dari tepi card */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 20px;
 }
