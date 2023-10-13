@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  
 }
 
 .tengah {
@@ -18,17 +17,17 @@ body {
   margin-top: 20px;
 }
 
-body{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
-   background-color: #f9b6c9;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9b6c9;
 }
 
 .card {
-  width: 500px;
-  height: 300px;
+  width: 700px;
+  height: 500px;
   border-radius: 2%;
   display: flex;
   justify-content: center;
@@ -113,13 +112,13 @@ body{
 }
 
 .form-container {
- text-align: center;
- padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 .button {
   display: inline-block;
-  background-color: #DB005B;
+  background-color: #db005b;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -133,7 +132,7 @@ body{
 }
 
 .button:hover {
-  background-color: #F266AB;
+  background-color: #f266ab;
 }
 
 .move {
@@ -149,6 +148,7 @@ table {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 th {
@@ -157,19 +157,19 @@ th {
   font-weight: bold;
   text-align: center;
   padding: 10px 15px;
-  border-top: 2px solid #C23373;
-  border-bottom: 2px solid #C23373;
+  border-top: 2px solid #c23373;
+  border-bottom: 2px solid #c23373;
 }
 
 td {
   background-color: #eaeaea;
   text-align: center;
   padding: 10px 15px;
-  border-top: 1px solid #C23373;
-  border-bottom: 1px solid #C23373;
+  border-top: 1px solid #c23373;
+  border-bottom: 1px solid #c23373;
 }
 tr:hover td {
-  background-color: #FEBBCC;
+  background-color: #febbcc;
 }
 
 tr:nth-child(odd) {
@@ -193,28 +193,27 @@ table {
   padding: 2rem;
   margin-top: 10px;
   border-collapse: collapse;
-  width: 100%;
   margin-bottom: 1rem;
   background-color: #fff;
   color: #000;
   font-size: 0.9rem;
-  border: 1px solid #C23373;
+  border: 1px solid #c23373;
 }
 
 td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #C23373;
+  border-top: 1px solid #c23373;
 }
 
 th {
   padding: 10px;
-  border: 1px solid #C23373;
+  border: 1px solid #c23373;
   text-align: center;
   vertical-align: top;
   border-top: 1px solid #dee2e6;
-  background-color: #EA1179;
-  border-bottom: 2px solid #C23373;
+  background-color: #ea1179;
+  border-bottom: 2px solid #c23373;
 }
 
 td,
@@ -229,15 +228,50 @@ tr {
   width: 150px;
 }
 
-.tabel-bagus {
+/* .tabel-bagus {
   margin-top: 2rem;
   padding-left: 10rem;
   padding-right: 10rem;
-}
+} */
 
 .text {
   margin: 20px; /* Atur jarak dari tepi card */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: bold;
   font-size: 20px;
+}
+
+.btn-crud {
+  width: 70px; /* Sesuaikan ukuran sesuai kebutuhan */
+  height: 20px; /* Sesuaikan ukuran sesuai kebutuhan */
+  padding: 10px;
+  background-color: #e91e63;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center; /* Agar teks berada di tengah */
+  line-height: 20px; /* Sesuaikan dengan tinggi tombol */
+  cursor: pointer;
+  transition: background-color 0.5s;
+  text-decoration: none;
+}
+
+/* Mengatur teks di tengah tombol */
+.btn-crud button {
+  text-align: center;
+  line-height: normal;
+}
+
+.button-group {
+  float: left;
+  margin-right: 10px;
+}
+
+.delete-button {
+  float: left;
+}
+
+.aksi-column {
+  width: 200px !important; /* Adjust the width as needed */
 }
