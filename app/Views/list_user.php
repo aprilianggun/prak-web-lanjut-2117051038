@@ -2,7 +2,7 @@
 <?= $this->section('content') ?>
 
 <div class="tabel-bagus">
-    <a href="<?= base_url('user/create') ?>">Add User</a>
+    <a href="<?= base_url('user/create') ?>" class="btn-crud" style="width:70px; height:20px">Add User</a>
     <table border="1" bgcolor="#eaeaea">
         <thead>
             <tr class="tabel size">
@@ -11,7 +11,7 @@
                 <th style="color: #FFE5E5;">NPM</th>
                 <th style="color: #FFE5E5;">Kelas</th>
                 <!-- <th style="color: #FFE5E5;">Foto</th> -->
-                <th style="color: #FFE5E5;">Aksi</th>
+                <th style="color: #FFE5E5;" class="aksi-column">Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -24,10 +24,19 @@
                         <td><?= $user['nama_kelas'] ?></td>
 
                         <td>
-                            <a href="<?= base_url('user/' . $user['id']) ?>" class="">Detail</a>
-                            <a href="#">Edit</a>
-                            <a href="#">Delete</a>
+                            <div class="button-group">
+                                <a href="<?= base_url('user/' . $user['id']) ?>" class="btn-crud">Detail</a>
+                                <a href="<?= base_url('user/' . $user['id'] . '/edit') ?>" class="btn-crud">Edit</a>
+                            </div>
+                            <form action="<?= base_url('user/' . $user['id']) ?>" method="post">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <?= csrf_field() ?>
+                                <div class="delete-button">
+                                    <button type="submit" class="btn-crud" style="width: 70px; height:30px">Delete</button>
+                                </div>
+                            </form>
                         </td>
+
                     </tr>
                 <?php endforeach; ?>
             <?php else : ?>
