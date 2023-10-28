@@ -17,7 +17,7 @@ body {
   margin-top: 20px;
 }
 
-body {
+.continer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,9 +29,9 @@ body {
   width: 700px;
   height: 500px;
   border-radius: 2%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   flex-direction: column; /* Stack the elements vertically */
   background-color: #ffffff;
   text-align: center;
@@ -264,14 +264,93 @@ tr {
 }
 
 .button-group {
-  float: left;
-  margin-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.delete-button {
-  float: left;
+.button-group a {
+  margin-right: 5px;
 }
 
 .aksi-column {
   width: 200px !important; /* Adjust the width as needed */
 }
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7c9c;
+  height: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo .firstname {
+  color: #f3d9df;
+  font-weight: 700;
+}
+
+.navbar-logo .lastname {
+  color: #ff2e63;
+  font-weight: 700;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item {
+  margin: 0 20px;
+}
+
+.navbar-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  padding: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navbar-link.active {
+  color: #ff1c51;
+}
+

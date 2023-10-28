@@ -1,6 +1,7 @@
 <?= $this->extend('layouts/app') ?>
 <?= $this->section('content') ?>
 
+<div class="continer">
 <div class="card">
     <div class="form-container">
         <form action="<?= base_url('user/' . $user['id']) ?>" method="post" enctype="multipart/form-data">
@@ -42,6 +43,7 @@
             <input type="submit" value="Submit" class="btn-login" />
         </form>
     </div>
+</div>
 </div>
 
 <?= $this->endSection() ?>
